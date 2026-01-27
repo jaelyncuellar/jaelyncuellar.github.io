@@ -148,7 +148,7 @@ footer button {
     padding: 12px 25px;
     border-radius: 8px;
     border: none; 
-    background: #0070f3;
+    background: var(--btn-background);
     color: white;
     font-weight: 500;
     cursor: pointer; 

@@ -6,6 +6,7 @@
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Jaelyn Cuellar | Software Engineer</title>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Roboto:wght@700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style.css"/> 
     </head>
 
@@ -19,61 +20,188 @@
     <body> 
         <header> 
             <h1>Jaelyn Cuellar</h1>
-            <p>Software Engineer • AI / Data / Web</p>
-            <a href="https://github.com/jaelyncuellar" target="_blank">GitHub</a>
-            <a href="https://linkedin.com/in/jaelyncuellar" target="_blank">LinkedIn</a>
+            <p class="subtitle">Software Engineer • AI / Data / Web</p>
+            <div class="links">
+                <a href="https://github.com/jaelyncuellar" target="_blank">GitHub</a>
+                <a href="https://linkedin.com/in/jaelyncuellar" target="_blank">LinkedIn</a>
+                <a href="JaelynCuellar_Resume.pdf" target="_blank">Resume</a>
+            </div>
         </header>
 
-        <section> 
+        <section class="about"> 
             <h2>About Me</h2>
-            <p> 
-                Software engineer with experience in AI, data-driven applications, 
-                and cloud-based systems. Interested in machine learning, computer vision, 
-                and impactful engineering solutions.
+            <p> Hello! I am Jaelyn Cuellar, a software engineer with experience in AI, data-driven applications, 
+                and cloud-based systems. I enjoy building scalable software solutions that solve real-world problems, including web, data, and AI systems.  
+                Outside work, I love music, walking my dog, drawing, and hitting the gym!
             </p>
         </section>
 
-        <section> 
+        <section class="projects"> 
             <h2>Projects</h2>
-            <div class="project"> 
-                <h3>Real-Time Emotion Detection</h3>
-                <p>CNN-based facial emotion recognition using FER-2013.</p>
-                <a href="https://github.com/jaelyncuellar/PROJECT_REPO">view project</a>
+            <div class="project-card"> 
+                <div class="project-header"> 
+                    <h3>Real-Time Emotion Detection</h3>
+                    <span>January 2026 - Present</span>
+                </div>
+                <p>Developing a CNN-based facial emotion recognition system using the FER-2013 dataset.</p>
+                <a href="#" class="project-btn">View project</a> 
             </div>
 
-            <div class="project"> 
-                <h3>AWS Spot Pricing Dashboard</h3>
+            <div class="project-card"> 
+                <div class="project-header"> 
+                    <h3>CareConnect Web Platform</h3>
+                    <span>November 2025 - Present </span>
+                </div>
+                <p>A web platform connecting staff to work tasks and information, leveraging React, Express, and PostgreSQL.</p>
+                <a href="https://github.com/jaelyncuellar/careConnect-web" class="project-btn">View project</a>
+            </div>
+
+            <div class="project-card"> 
+                <div class="project-header"> 
+                    <h3>CareConnect Mobile - iOS Staff App</h3>
+                    <span>Fall 2025 </span>
+                </div>
+                <p>A v1 iOS application for the CareConnect Web Platform. Using Swift, UIKit, and App Fundamentals.</p>
+                <a href="https://github.com/jaelyncuellar/careConnect-iOS" class="project-btn">View project</a>
+            </div>
+
+            <div class="project-card"> 
+                <div class="project-header"> 
+                    <h3>Event Website (Template)</h3>
+                    <span>Fall 2025 </span>
+                </div>
+                <!-- <p>Developing a CNN-based facial emotion recognition system using the FER-2013 dataset</p> -->
+                <a href="https://github.com/jaelyncuellar/event-website-fullstack" class="project-btn">View project</a>
+            </div>
+
+            <div class="project-card"> 
+                <div class="project-header"> 
+                    <h3>Event Website</h3>
+                    <span>Fall 2025 </span>
+                </div>
+                <!-- <p>Developing a CNN-based facial emotion recognition system using the FER-2013 dataset</p> -->
+                <a href="https://github.com/jaelyncuellar/quinceanera-event" class="project-btn">View project</a>
+            </div>
+
+            <div class="project-card"> 
+                <div class="project-header"> 
+                    <h3>Collection of Mini iOS Applications</h3>
+                    <span>Summer 2025</span>
+                </div>
+                <p>Built 15+ mini iOS applications in Swift to practice core iOS development concepts, including UIKit components, MVC architecture, view controllers, user interaction, and local data storage.</p>
+                <a href="https://github.com/stars/jaelyncuellar/lists/ios101" class="project-btn">View project</a>
+            </div>
+
+            <div class="project-card"> 
+                <div class="project-header"> 
+                    <h3>The Language of Dreams: Analyzing Dream Journals</h3>
+                    <span>Spring 2025</span>
+                </div>
+                <p>This project applies BERTopic and a fine-tuned BERT model to analyze themes and emotions in large-scale dream journals, with results evaluated using multiple metrics, including F1 scores and the Jaccard Index, which I implemented to measure classification accuracy and label overlap.</p>
+                <a href="https://gitlab.oit.duke.edu/cfk14/cs376dreams" class="project-btn">View project</a>
+            </div>
+
+            <div class="project-card"> 
+                <div class="project-header"> 
+                    <h3>Software-Based Network Router</h3>
+                    <span>Spring 2024</span>
+                </div>
+                <p>Implemented a functional software router capable of ARP handling, IP packet forwarding via longest-prefix routing, ARP caching, and ICMP error generation.</p>
+                <a href="https://github.com/jaelyncuellar/Router" class="project-btn">View project</a>
+            </div>
+
+            <div class="project-card"> 
+                <div class="project-header"> 
+                    <h3>ML Projects Collection</h3>
+                    <span>Spring 2024</span>
+                </div>
+                <p>A series of machine learning assignments covering regression, classification, clustering, and neural networks.</p>
+                    
+                <div class="ml-projects-grid"> 
+                    <div class="ml-card"> 
+                        <h4>Clustering and Classification Fundamentals</h4>
+                        <p>Explored unsupervised, semi-supervised, and supervised learning techniques using clustering, local centroids, Voronoi diagrams, and nearest-neighbor classification. Implemented data standardization, validation, and testing to evaluate predictive models.</p>
+                        <a href="https://colab.research.google.com/drive/1dU22y6dIERgg_FtrQV5AD19D-MaezenI?usp=sharing" target="_blank" class="project-btn">View Project</a>
+                    </div>
+                    <div class="ml-card">
+                        <h4>Linear Regression and Optimization</h4>
+                        <p>Implemented univariate and multivariate linear regression models, explored empirical risk, and applied gradient descent and automatic differentiation to optimize model parameters.</p>
+                        <a href="https://colab.research.google.com/drive/1dLauekTJlAtdzyewi0_B_NI5Rii694g3?usp=sharing" target="_blank" class="project-btn">View Project</a>
+                    </div>
+
+                    <div class="ml-card">
+                        <h4>Gradient Descent and Linear Classification</h4>
+                        <p>Worked with stochastic and ordinary gradient descent to train linear classifiers, including the classification of handwritten digits. Implemented score-based linear models from scratch.</p>
+                        <a href="https://colab.research.google.com/drive/1q8WfIZH1V_tqJExaKT16KOFRlBThzvFZ?usp=sharing" target="_blank" class="project-btn">View Project</a>
+                    </div>
+                        
+                    <div class="ml-card">
+                        <h4>Risk Minimization, Dimensionality, and Softmax Classification</h4>
+                        <p>Studied dimensionality reduction, stochastic risk minimization, regularization, and the Bayes classifier. Implemented a toy softmax classification problem and applied bootstrap validation.</p>
+                        <a href="https://colab.research.google.com/drive/17paqtTTNpWcVbW8Z2L5lP0_cJxKs3XAG?usp=sharing" target="_blank" class="project-btn">View Project</a>
+                    </div>
+
+                    <div class="ml-card">
+                        <h4>Hyperplane Geometry</h4>
+                        <p>Analyzed the geometric foundations of linear classifiers and hyperplanes, including decision boundaries and margin concepts.</p>
+                        <a href="https://colab.research.google.com/drive/1VyWtjpAjT9viUvK1ZEp_eEjTSL1U6hLq?usp=sharing" target="_blank" class="project-btn">View Project</a>
+                    </div>
+                    <div class="ml-card">
+                        <h4>Decision Trees and Ensemble Learning</h4>
+                        <p>Implemented decision tree classifiers, studied partitioning methods, and explored ensemble approaches like random forests.</p>
+                        <a href="https://colab.research.google.com/drive/1H4M0mbW7xiW_L6FeEyqJlTS6aK2YzyFu?usp=sharing" target="_blank" class="project-btn">View Project</a>
+                    </div>
+
+                    <div class="ml-card">
+                        <h4>Multilayer Perceptron (MLP) Backpropagation</h4>
+                        <p>Developed MLP models for classification and regression, implementing forward propagation, loss functions, and backpropagation using local input and parameter Jacobians.</p>
+                        <a href="https://colab.research.google.com/drive/12YLZt6NBjzR-f05w1W7HLU97k2c8smG9?usp=sharing"target="_blank" class="project-btn">View Project</a>
+                    </div>
+
+                    <div class="ml-card">
+                        <h4>Convolutional Neural Networks</h4>
+                        <p>Implemented a neural network classifier incorporating convolution operations, gradient computation for convolution layers, and evaluation of classification performance.</p>
+                        <a href="https://colab.research.google.com/drive/1JKdJLrRKlfuUQ5oR_oQUX2FVSWImUTnY?usp=sharing" target="_blank" class="project-btn">View Project</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card"> 
+                <div class="project-header"> 
+                    <h3>Environmental Website</h3>
+                    <span>Fall 2023</span>
+                </div>
+                <p>Hackathon theme was "Code for good". We built an environmental website, retrieving real-time news related to environment, login features, and persistent data.</p>
+                <a href="https://github.com/jaelyncuellar/HackDuke2023" class="project-btn">View project</a>
+            </div>
+
+            <div class="project-card"> 
+                <div class="project-header"> 
+                    <h3>AWS Spot Pricing Dashboard</h3>
+                    <span>Summer 2023</span>
+                </div>
                 <p>Interactive dashboard modeling EC2 spot instance pricing.</p>
-                <a href="https://github.com/jaelyncuellar/PROJECT_REPO">view project</a>
+                <a href="https://gitlab.oit.duke.edu/jlc188/cloudarb-dashboard" class="project-btn">View project</a>
             </div>
         </section>
+
 
         <section> 
             <h2>Skills</h2>
             <ul>
-                <li>Python, Java, Javascript</li>
+                <li>Python, Java, Javascript, C</li>
                 <li>Machine Learning, Computer Vision</li>
                 <li>AWS, Git, SQL</li>
             </ul>
         </section>
 
         <footer>
-            <form
-            action="https://formspree.io/f/mwvvbdko"
-            method="POST" 
-            >
-            <p>Contact Jaelyn!</p>
-            <label>
-                Your email:
-                <input type="email" name="email">
-            </label>
-            <label>
-                Your message:
-                <textarea name="message"></textarea>
-            </label>
-            <button type="submit">Send</button>
-            </form>            
-            
+            <h2>Contact Me</h2>
+            <form action="https://formspree.io/f/mwvvbdko" method="POST">
+                <input type="email" name="email" placeholder="Your email" required>
+                <textarea name="message" placeholder="Your message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
         </footer>
     </body>
 </html>

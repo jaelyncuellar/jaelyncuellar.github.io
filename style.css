@@ -2,21 +2,39 @@
   /* --primary-color: #1e90ff; 
   --secondary-color: #ffffff; 
   --text-color: rgb(34, 34, 34);  */
+  --primary-background: white; 
   --body-text: #333;
-  --btn-background: #950070; 
-  --btn-background-hover: #e073c5; 
-  --btn-text: white; 
-  --cards-background: #f5f5f5;
+  --btn-background: #FFEAC2; 
+  --btn-background-hover: #ffcd71; 
+  --btn-text: black; 
+  --cards-background:#f1f1f1;;
 }
 
-body { 
+body,
+.about,
+.projects,
+.skills { 
+    padding-top: 60px; /* navbar height so nothing covered */
+}
+
+body {
     font-family: 'Inter', sans-serif; 
     color: var(--body-text); 
     max-width: 1000px;
     margin: auto; 
-    padding: 20px; 
+    padding: 60px 20px 20px 20px; 
     line-height: 1.8;
 }
+
+input,
+textarea,
+select,
+button, 
+form {
+  font-family: inherit;
+  font-size: 1rem;
+}
+
 
 header { 
     text-align: center;
@@ -41,7 +59,7 @@ header h1 {
     margin: 0 10px;
     text-decoration: none;
     background: var(--btn-background);
-    color: var(--btn-text); 
+    color: black;
     padding: 10px 18px;
     border-radius: 6px; 
     font-weight: 500; 
@@ -52,7 +70,90 @@ header h1 {
     background: var(--btn-background-hover); 
 }
 
-.projects .project-card { 
+.navbar { 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    background-color: var(--primary-background); 
+    z-index: 1000; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+    display: flex;
+    justify-content: center; /* center nav-list */
+    align-items: center;     /* vertical centering */
+    height: 60px;            /* optional fixed height */
+    padding: 0 0rem;
+}
+
+.nav-list {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: center; 
+}
+
+.nav-list a { 
+    text-decoration: none;
+    color: inherit; 
+    font-weight: 500; 
+}
+.nav-list a:hover {
+    color: var(--btn-background-hover);  /* highlight on hover */
+    text-decoration: underline;
+}
+
+/* COLLAPSE SECTION  */
+.section-header {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky; 
+    top: 60px; 
+    z-index: 900; 
+    background: var(--primary-background);
+    padding: 10px 0;
+}
+.section-header.show{ 
+    position: sticky; 
+    top: 100px; 
+    z-index: 1000; 
+}
+.collapsible {
+  background-color: inherit;
+  color: var(--body-text);
+  cursor: pointer;
+  width: 80%;
+  height: 40px; 
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 30px;
+}
+
+
+.active, .collapsible:hover {
+  color: var(--btn-background-hover);
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+  max-height: 0; 
+  transition: max-height 0.3s ease, padding 0.3s ease;
+}
+.content.show {
+  display: block;
+  max-height: max-content;
+  padding: 18px;
+}
+/* END OF COLLAPSE SECTION  */
+
+
+.projects .project-card { /* targets .project-card inside .projects */
     background: var(--cards-background); 
     padding: 20px; 
     margin-bottom: 20px; 
@@ -142,6 +243,7 @@ footer input, footer textarea {
     padding: 12px;
     border-radius: 8px;
     border: 1px solid #ccc; 
+
 }
 
 footer button { 
@@ -149,7 +251,7 @@ footer button {
     border-radius: 8px;
     border: none; 
     background: var(--btn-background);
-    color: white;
+    color: var(--btn-text);
     font-weight: 500;
     cursor: pointer; 
     transition: background 0.3s;

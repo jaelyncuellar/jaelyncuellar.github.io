@@ -5,9 +5,11 @@
   --primary-background: white; 
   --body-text: #333;
   --btn-background: #FFEAC2; 
-  --btn-background-hover: #ffcd71; 
+  --btn-background-hover: #e99d0f; 
   --btn-text: black; 
-  --cards-background:#f1f1f1;;
+  --cards-background:#f1f1f1;
+  --cards-background-secondary:#e4e4e4;
+
 }
 
 body,
@@ -24,6 +26,7 @@ body {
     margin: auto; 
     padding: 60px 20px 20px 20px; 
     line-height: 1.8;
+    font-size:large;
 }
 
 input,
@@ -62,7 +65,7 @@ header h1 {
     color: black;
     padding: 10px 18px;
     border-radius: 6px; 
-    font-weight: 500; 
+    font-weight: 700; 
     transition: background 0.3s; 
 }
 
@@ -75,24 +78,50 @@ header h1 {
     top: 0; 
     left: 0; 
     width: 100%; 
-    background-color: var(--primary-background); 
+    background-color: var(--btn-background); 
     z-index: 1000; 
     box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
     display: flex;
-    justify-content: center; /* center nav-list */
+    /* justify-content: center; center nav-list */
     align-items: center;     /* vertical centering */
     height: 60px;            /* optional fixed height */
-    padding: 0 0rem;
+    /* padding: 0 10rem; */
+    font-size: large;
+}
+
+.nav-left, 
+.nav-center, 
+.nav-right {
+    flex:1;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  padding-left: 2rem;
+  color:var(--body-text)
+}
+
+.name-logo {
+  font-weight: 600;
+  color: var(--body-text);
+}
+
+.nav-right,
+.nav-center {
+  display: flex;
+  justify-content: right;
+  padding-right: 2em;
 }
 
 .nav-list {
-    display: flex;
-    gap: 2rem;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    justify-content: center; 
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
+
 
 .nav-list a { 
     text-decoration: none;
@@ -101,7 +130,15 @@ header h1 {
 }
 .nav-list a:hover {
     color: var(--btn-background-hover);  /* highlight on hover */
-    text-decoration: underline;
+    text-decoration:overline;
+}
+
+.about { 
+    font-weight: 500;
+}
+
+.emoji { 
+    font-size:x-large;
 }
 
 /* COLLAPSE SECTION  */
@@ -172,19 +209,16 @@ header h1 {
     margin-bottom: 10px;
 }
 
-.project-header h3 { 
-    margin: 0;
-}
-
 .project-btn { 
     display: inline-block;
-    padding: 10px 22px; 
+    padding: 10px 10px; 
+    margin: 0 0 0 -20px;
     background: var(--btn-background); 
     color: var(--btn-text); 
     border-radius: 999px;
     text-decoration: none;
-    font-weight: 500;
-    font-size: 0.95rem;
+    font-weight: 700;
+    font-size: 1.2rem;
     line-height: 1.2;
     transition: background 0.3s, transform 0.15s;
 }
@@ -197,10 +231,11 @@ header h1 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
+  padding: 40px;
 }
 
 .ml-card {
-  background: var(--cards-background);
+  background: var(--cards-background-secondary);
   padding: 20px;
   border-radius: 10px;
   transition: transform 0.2s, box-shadow 0.2s;
@@ -259,4 +294,22 @@ footer button {
 
 footer button:hover{ 
     background: var(--btn-background-hover);
+}
+
+
+/* FOOTER */
+.site-footer {
+text-align: center;
+padding: 20px;
+color: var(--accent-soft);
+font-size: 0.9rem;
+}
+
+.site-footer a {
+color: var(--accent-secondary);
+text-decoration: none;
+}
+
+.site-footer a:hover {
+text-decoration: underline;
 }
